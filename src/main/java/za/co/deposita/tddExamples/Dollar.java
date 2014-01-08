@@ -8,4 +8,17 @@ package za.co.deposita.tddExamples;
  * To change this template use File | Settings | File Templates.
  */
 public class Dollar {
+    int amount;
+    Dollar(int amount){
+        this.amount = amount;
+    }
+
+    Dollar times(int multiplier){
+        return new Dollar(amount * multiplier);
+    }
+
+    public boolean equals(Object obj){
+        Dollar dollar = (Dollar) obj;
+        return (amount == dollar.amount);
+    }
 }
